@@ -1,11 +1,1 @@
-javascript:(function(){
-  var u=prompt('Username:'); if(u===null)return;
-  var p=prompt('Password:'); if(p===null)return;
-  var ue=document.getElementById('username');
-  var pe=document.getElementById('password');
-  var btn=document.getElementById('submit');
-  if(!ue||!pe||!btn){alert('Element(s) not found');return;}
-  ue.value=u; pe.value=p;
-  var f=(btn.closest?btn.closest('form'):null);
-  if(f)f.submit();else btn.click();
-})();
+javascript:(function(){var u=prompt('Username:');if(u===null)return;var p=prompt('Password:');if(p===null)return;var ue=document.getElementById('username'),pe=document.getElementById('password'),btn=document.getElementById('submit');if(!ue||!pe||!btn){alert('Element(s) not found');return;}ue.focus();ue.value=u;ue.dispatchEvent(new Event('input',{bubbles:true}));ue.dispatchEvent(new Event('change',{bubbles:true}));pe.focus();pe.value=p;pe.dispatchEvent(new Event('input',{bubbles:true}));pe.dispatchEvent(new Event('change',{bubbles:true}));var f=(btn.closest?btn.closest('form'):null);if(f)f.submit();else btn.click();})();
