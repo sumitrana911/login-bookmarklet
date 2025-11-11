@@ -1,5 +1,1 @@
-javascript:(function(){
-  document.getElementById('username').value='yourUsername';
-  document.getElementById('password').value='yourPassword';
-  document.getElementById('submit').click();
-})();
+javascript:(function(){var ue=document.getElementById('username'),pe=document.getElementById('password'),btn=document.getElementById('submit');if(!ue||!pe||!btn){alert('Element(s) not found');return;}ue.focus();ue.value='yourUsername';ue.dispatchEvent(new Event('input',{bubbles:true}));ue.dispatchEvent(new Event('change',{bubbles:true}));pe.focus();pe.value='yourPassword';pe.dispatchEvent(new Event('input',{bubbles:true}));pe.dispatchEvent(new Event('change',{bubbles:true}));var f=(btn.closest?btn.closest('form'):null);if(f)f.submit();else btn.click();})();
