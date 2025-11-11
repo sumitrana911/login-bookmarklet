@@ -1,17 +1,1 @@
-javascript:(function(){
-  var input=document.createElement('input');
-  input.type='file';
-  input.accept='application/json';
-  input.onchange=function(e){
-    var file=e.target.files[0];
-    var reader=new FileReader();
-    reader.onload=function(){
-      var c=JSON.parse(reader.result);
-      document.getElementById('username').value=c.username;
-      document.getElementById('password').value=c.password;
-      document.getElementById('submit').click();
-    };
-    reader.readAsText(file);
-  };
-  input.click();
-})();
+javascript:(function(){var input=document.createElement('input');input.type='file';input.accept='application/json';input.onchange=function(e){var file=e.target.files[0];if(!file){alert('No file selected');return;}var reader=new FileReader();reader.onload=function(){try{var c=JSON.parse(reader.result);var ue=document.getElementById('username'),pe=document.getElementById('password'),btn=document.getElementById('submit');if(!ue||!pe||!btn){alert('Element(s) not found');return;}ue.focus();ue.value=c.username||'';ue.dispatchEvent(new Event('input',{bubbles:true}));ue.dispatchEvent(new Event('change',{bubbles:true}));pe.focus();pe.value=c.password||'';pe.dispatchEvent(new Event('input',{bubbles:true}));pe.dispatchEvent(new Event('change',{bubbles:true}));var f=(btn.closest?btn.closest('form'):null);if(f)f.submit();else btn.click();}catch(ex){alert('Invalid JSON file');}};reader.readAsText(file);};document.body.appendChild(input);input.click();setTimeout(()=>{document.body.removeChild(input)},30000);})();
