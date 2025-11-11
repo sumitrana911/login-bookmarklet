@@ -28,4 +28,40 @@ This project is a small productivity hack that fills your credentials and logs y
 <input type="text" name="username" id="username">
 <input type="password" name="password" id="password">
 <button id="submit" class="btn">Submit</button>
+```
+🌐 How to Use It
 
+Copy the JavaScript code (starting with javascript:).
+
+In Chrome/Edge, right-click the Bookmarks bar → Add Page...
+
+Give it a name (like Quick Login).
+
+Paste the code in the URL field.
+
+Visit your login page → click the bookmark → it fills and logs in automatically.
+
+
+
+🔒 Security Notes
+
+Never store real passwords in public or shared bookmarks.
+
+Use the hard-coded method only on personal machines.
+
+Bookmarklets cannot bypass CAPTCHAs or 2FA.
+
+Use prompt-based or file-based for better safety.
+
+For corporate use, prefer password managers or SSO.
+
+🙏 Thank You
+
+Thanks a lot for reading!
+It’s a small trick, but I hope it saves you some time and clicks in your daily routine.
+Feel free to fork, modify, and experiment with it for your own workflow.
+
+Happy automating and stay productive! 💻✨
+
+📖 Read the detailed write-up on Medium:
+https://medium.com/@sumit.rana911/how-i-automated-my-daily-logins-using-a-bookmarklet-9e5a36b0ba87
