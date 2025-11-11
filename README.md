@@ -29,7 +29,9 @@ This project is a small productivity hack that fills your credentials and logs y
 <input type="password" name="password" id="password">
 <button id="submit" class="btn">Submit</button>
 ```
-🌐 How to Use It
+---
+
+#🌐 How to Use It
 
 Copy the JavaScript code (starting with javascript:).
 
@@ -43,7 +45,7 @@ Visit your login page → click the bookmark → it fills and logs in automatica
 
 
 
-🔒 Security Notes
+#🔒 Security Notes
 
 Never store real passwords in public or shared bookmarks.
 
@@ -55,7 +57,7 @@ Use prompt-based or file-based for better safety.
 
 For corporate use, prefer password managers or SSO.
 
-🙏 Thank You
+#🙏 Thank You
 
 Thanks a lot for reading!
 It’s a small trick, but I hope it saves you some time and clicks in your daily routine.
